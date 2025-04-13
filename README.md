@@ -577,5 +577,24 @@ The usability testing of the SSPS project interface helped the team identify its
 
 
 ## 📌**Conclusion**
+The `HCMUT-SSPS (HCMUT Student Smart Printing Service)` is a technology solution designed to modernize and optimize the printing process for students at `Ho Chi Minh City University of Technology (HCMUT)`. By integrating modern technologies such as `MongoDB, ExpressJS, React, and PayOS`, the system has made significant progress in simplifying print order placement, document management, and online payment processing.
+
+With features like `real-time print job status tracking, cashless payment support, and a user-friendly interface`, the system not only meets fundamental requirements but also enhances the overall user experience. The development team has focused on designing the system with ease of use in mind, ensuring convenience for students while optimizing processing performance to serve a large number of users efficiently.
+
+Additionally, development tools such as `Postman, Draw.io, Figma, and GitHub` have played a crucial role in maintaining the project's progress, testing, and structured documentation. Initial testing has demonstrated the system's stability, meeting key criteria for `accuracy, processing speed, and data security`.
+
+Looking ahead, the project team recognizes the potential for expanding HCMUT-SSPS by integrating `advanced features` such as `automated printing workflows, data-driven resource optimization, and multilingual support` to cater to international students. Furthermore, research into integrating technologies like `artificial intelligence (AI)` and `blockchain` is being considered to enhance security and personalization within the system.
+
+Although there are still challenges to address—such as optimizing the interface for `mobile devices` and improving `compatibility with different printing systems`—the team believes that current efforts will serve as a `solid foundation for future development`. As a result, HCMUT-SSPS is not just a `smart printing solution` but also an essential part of the `technological ecosystem` supporting student life.
 
 ## 🏆Contributors
+This project was successfully developed thanks to the dedication and effort of the following contributors:
+1. Hàng Nhựt Long - 2211874
+2. Nguyễn Anh Khoa - 2211614
+3. Nguyễn Quang Sáng - 2212922
+4. Nguyễn Minh Đạt - 2210693
+5. Trần Quang Tác - 2212962
+6. Trần Nguyễn Anh Khoa - 2211651
+7. Ngô Chí Dũng - 2210578
+
+🎉🎉🎉 Thank you for checking out this project! 🚀
