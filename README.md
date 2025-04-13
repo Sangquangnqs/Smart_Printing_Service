@@ -358,6 +358,127 @@ Description of the Entire System Component Diagram:
   - After completing the print job, the Printer component sends a status update (completed or failed) back to Webpage, which then updates the Database accordingly
 
 ## 📌**Implementation**
+**.1 Technologies Used**
+The system is designed and built using a combination of modern technologies, divided into two categories: core technologies and supporting technologies. This selection not only ensures efficiency and security but also optimizes user experience and system scalability.
+
+
+<p align="center">
+<img src="assets/cn.png" alt="cn" width="500">
+</p>
+
+- Core Technologies:
+  - MongoDB: MongoDB is a flexible and scalable NoSQL database management system. It uses a document-based structure instead of traditional tables, making it efficient for storing heterogeneous data. MongoDB supports powerful queries and integrates seamlessly with modern applications, reducing complexity in data processing.
+  - Express.js: Express.js is a simple yet powerful backend framework for Node.js, enabling quick and efficient development of RESTful APIs. It provides various useful tools such as middleware for handling business logic and managing HTTP requests. Due to its flexibility, Express.js simplifies development and maintenance while ensuring high performance.
+  - React: React is a JavaScript library developed by Facebook, used for building dynamic and interactive user interfaces. React allows the creation of reusable UI components, reducing development effort and improving code maintainability. With its Virtual DOM mechanism, React optimizes rendering performance, ensuring a smooth user experience.
+  - PayOS: PayOS is a payment platform integrated to securely and efficiently process financial transactions. It supports various payment methods, including credit cards, e-wallets, and bank transfers, catering to diverse user needs. Integrating PayOS into the system ensures high security in transactions and minimizes fraud risks.
+
+<p align="center">
+<img src="assets/cn2.png" alt="cn2" width="500">
+</p>
+
+- Supporting Technologies:
+  - Postman: Postman is a powerful API testing tool that ensures the accuracy and performance of API endpoints. It allows developers to easily send HTTP requests, view server responses, and perform automated tests. Additionally, Postman provides collection management features to organize and share test scenarios among team members.
+  - Draw.io: Draw.io is an online diagramming application commonly used for modeling system architectures and data flows. It allows the creation of professional diagrams, including UML, ERD, and flowcharts. With integration support for cloud storage platforms like Google Drive and GitHub, Draw.io enhances team collaboration.
+  - Figma: Figma is a web-based UI/UX design tool that enables real-time collaboration among teams. With an intuitive interface and powerful features, Figma facilitates quick and easy UI design. Furthermore, its sharing and feedback features streamline the design and deployment process.
+  - GitHub: GitHub is a widely used source code management platform that tracks code changes and supports team collaboration. It provides tools such as pull requests, branches, and issue tracking for managing and reviewing changes in a project. With CI/CD integration, GitHub also automates deployment and testing workflows.
+- With the seamless integration of core and supporting technologies, the system not only meets business requirements but also delivers the best user experience.
+
+**5.2 GitHub Repository Setup**
+
+The team has set up a GitHub repository, accessible [here](https://github.com/ngochidung2111/CNPM).
+
+<p align="center">
+<img src="assets/git.png" alt="git" width="500">
+</p>
+
+This repository stores the source code for the `Student Smart Printing Service at HCMUT`, developed by `team L03 for the Software Engineering course`. It includes the following main components:
+- client: Contains the frontend source code.
+- server: Contains backend logic and API implementations.
+- docs: Stores documentation and project descriptions.
+Additionally, configuration files such as package.json help manage project dependencies. The README file provides an overview and objectives of the project.
+
+**3. Usability Test**
+
+Usability testing is the process of evaluating the effectiveness, ease of use, and user-friendliness of a user interface in product development. For the printing service for students at Ho Chi Minh City University of Technology (HCMUT), this test aims to ensure that the system meets the needs and expectations of end users. This document presents the usability testing process based on methods and procedures proposed by the Nielsen Norman Group (NNGroup).
+
+- Testing Objectives: The objectives of this usability test are:
+  - User-friendly interface: Evaluate whether the interface is easy to understand and use.
+  - Ease of use of functions: Assess the ability to perform key tasks efficiently and effortlessly.
+  - Task completion efficiency: Measure the time taken and the success rate of task completion to determine system effectiveness.
+  - Improvements based on feedback: Collect user opinions and suggestions to adjust and enhance the interface before deployment.
+- Selection of Test Participants: The selection of test participants is an essential factor influencing the accuracy and completeness of the usability test. For the printing service at HCMUT, the test group selected four participants with the following characteristics:
+  - Participant A: A student from the Faculty of Computer Science and Engineering with experience in developing and using similar websites.
+  - Participants B, C, D: Students from other faculties without in-depth knowledge of web development.
+  - This selection helps evaluate the interface from different perspectives, ensuring that the system is usable for both tech-savvy and non-tech-savvy users. Since HCMUT students are the primary users of this service, selecting representatives from this group ensures accurate and useful feedback collection.
+- Test Scenario Design: Designing test scenarios is a crucial step in guiding participants through the usability test while performing the required tasks. The scenarios are based on the system’s core functionalities to ensure all aspects are tested.
+  - Performing Basic Student Functions:
+    - Interfaces tested: Homepage, Role selection page (Student), Login page, Personal information page, Paper purchase page, Document printing page, Print history page, Payment history page.
+    - Test scenario: `Access homepage`: Open a browser and verify that the homepage is displayed correctly.`Role selection`: Select "Student" and confirm redirection to the student login page. `Login`: Enter account credentials, verify successful login, and display personal information.`Purchase printing paper`: Select the quantity, complete the payment, confirm the transaction, and check for an updated paper count. `Print document`: Upload a document, select the number of copies, confirm the print command, and complete the process. `View history`: Access print and payment history, verify that information is displayed correctly.
+  - Performing SPSO Functions:
+    - Interfaces tested: Includes the first four steps from the student role, plus additional pages:`Printer management, System configuration, Print history, Print reports`.
+    - Test scenario: `Manage printers`: Update printer information, turn devices on/off, confirm changes. `Configure system`: Modify system settings and confirm successful application. `View print history`: Check if print orders are displayed correctly. `View reports`: Access reports and verify that print usage statistics are displayed correctly.
+- Testing Methods:
+  - Qualitative Usability Testing: This method focuses on collecting qualitative feedback from users, including:
+    - Interface evaluation: Assessing aesthetics, clarity, and consistency.
+    - User experience: Gathering opinions on ease of use and task efficiency.
+    - Challenges faced: Identifying difficulties encountered while using the system.
+    - Improvement suggestions: Recommending interface and functionality enhancements.
+  - Remote Unmoderated Testing:This method allows users to conduct tests naturally and flexibly without direct supervision.Steps involved:
+    - Figma presentation: Use Figma to share the interface with users.
+    - Online testing: Users perform tasks according to pre-designed scenarios.
+    - Feedback submission: Users provide comments and suggestions after completing the test.
+- Preparation of Testing Environment and Tools
+  - Testing Environment:
+    - Devices: Computer or mobile device with internet access, web browser, and a Figma account.
+  - Testing Tools:
+    - Figma: Used for interface design and presentation.
+    - Google Forms: Used to collect feedback and evaluations from users.
+    - Time tracking: A tool to measure completion time or ask users to record the time taken for each task.
+  - Supporting Documents
+    - Figma usage guide.
+    - Detailed test scenarios.
+    - Feedback forms (comments, time tracking, task completion rate).
+- Conducting the Test:
+  - Introduction and Instructions: Explain the testing objectives. Provide guidance on using Figma and following test scenarios.
+  - Providing Figma Access: Share the Figma interface link, ensuring access permissions and interactivity.
+  - Performing the Test: Users utilize Figma’s presentation mode to complete tasks based on the test scenarios, record task completion times, and provide interface feedback.
+
+<p align="center">
+<img src="assets/figma.png" alt="figma" width="500">
+</p>
+
+  - Collecting Feedback: Users fill out a feedback form (Google Forms) regarding their experience, challenges, and improvement suggestions.
+
+<p align="center">
+<img src="assets/mh.png" alt="mh" width="500">
+</p>
+
+- Data Collection and Analysis:
+  - Data Collection:
+    - Task completion time: Record the average time taken to complete tasks.
+    - Completion rate: Assess the percentage of successfully completed tasks.
+    - Feedback and comments: Gather opinions on strengths, weaknesses, and improvement suggestions.
+  - Data Analysis:
+    - Quantitative analysis: Calculate average task completion time and success rates.
+    - Qualitative analysis: Categorize feedback into strengths, weaknesses, and improvement suggestions.
+    - Problem identification: Evaluate common issues and their severity.
+  - Evaluation and Conclusion:
+    - Assess the extent to which testing objectives were met.
+    - Identify the strengths and weaknesses of the interface and suggest specific improvements based on user feedback.
+- Test Results and Recommendations:
+  - Test Results:
+    - User A: Completion rate: 100%, average time: 7 seconds. Feedback: Simple interface but lacks consistency in colors and design style. Suggestion: Add a file preview feature and usage instructions.
+    - User B: Completion rate: 90%, average time: 17 seconds. Feedback: Lacks usage instructions, but other elements are fine.
+    - User C: Completion rate: 100%, average time: 10 seconds. Feedback: Interface is good, suggests adding a dark mode.
+    - User D: Completion rate: 100%, average time: 12 seconds. Feedback: Easy-to-understand and visually appealing interface.
+  - Recommended Improvements
+    - Enhance color scheme and aesthetics: Use harmonious and consistent colors.
+    - Add file preview functionality.
+    - Provide clear usage instructions.
+    - Implement a dark mode option.
+    - Increase consistency in interface design.
+- Conclusion:
+The usability testing of the SSPS project interface helped the team identify its strengths and weaknesses. While the system is designed for ease of use and fulfills its core functions, improvements in aesthetics and usability instructions are necessary to enhance user experience. Based on the test results, the team will adjust the interface according to the suggested improvements to improve visual appeal, consistency, and add essential new features.
 
 ## 📌**Feature Overview**
 
