@@ -165,8 +165,20 @@ The source code of the software can be accessed via the following link:
 - Management and Reporting Requirements:
   - The system should automatically generate monthly reports on printing activities and usage statistics.
   - Reports must be easily accessible and customizable for administrators.
-  
+
 ## 📌**Use case diagram** 
+<p align="center"><img src="assets/uc.png" alt="uc" width="600"></p>
+
+## 📌**Class diagram** 
+
+<p align="center"><img src="assets/class.png" alt="class" width="600"></p>
+
+The class diagram describes the print service management system, including key classes such as `User, Student, SPSO, SystemConfiguration, Report, PaymentTransaction, PrintingHistory, PrintJob, Printer, PrintProperties, Document, and Location`.
+- User and Student are two main classes that extend from a base class. Users can perform actions such as `resetPassword()`, `authenticate()`, and `updateProfile()`, while Student includes additional printing-related functionalities such as `viewPrintingHistory()`, `buyPages()`, `schedulePrinting()`, and `checkBalance()`.
+- SPSO (Service Printing System Operator) manages the printing system through methods like `managePrinters()`, `configureSystem()`, and `generateReports()`. This class is directly linked to SystemConfiguration, which is responsible for configuring printing quotas and allowed file types.
+- PrintJob stores information about print jobs, including start time, end time, status, and printing properties. Operations on PrintJob include `submit()`, `cancel()`, `getStatus()`, and `checkBalance()`. Additionally, this class is associated with PrintProperties to manage detailed printing settings such as paper size, number of pages, and document information.
+- PaymentTransaction handles student payment transactions with methods like `processPayment()`, `validateTransaction()`, and `getReceipt()`.
+- Other classes such as `Location, Printer, and Document` manage information related to printers, documents, and printing locations within the system.
 
 ## 📌**Develop MVP 1** 
 
