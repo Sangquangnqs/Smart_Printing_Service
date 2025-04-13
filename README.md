@@ -197,6 +197,48 @@ Our team has designed the user interface using Figma. To view the detailed MVP 1
 </p>
 
 ## 📌**Architecture design**
+### 🚀 **Layered Architecture**
+
+**1. Overview:**
+
+To build the HCMUT_SSPS smart printing service website, the team adopts the MVC architecture model (Model-View-Controller):
+- `Model`: Handles and manages data, focusing on business logic and data processing to ensure a coherent and consistent system.
+- `View`: Represents the user interface, responsible for displaying data from the Model and receiving user interactions.
+- `Controller`: Acts as an intermediary between the Model and View, managing core logic and processing user requests, ensuring smooth and consistent system operation.
+
+**2. Architectural Diagram**
+
+<p align="center">
+<img src="assets/ad.png" alt="ad" width="600">
+</p>
+
+**3. Architectural Diagram Description**
+
+For the system architecture, the team utilizes the **MERN stack (MongoDB, Express, React, Node.js)**, structured into three main layers: **Presentation Layer, Application Layer, and Data Layer**. With the support of an **API Gateway**, microservices handle specific functions such as **user management, printing history, printers, and payment**, ensuring system stability, maintainability, and scalability.
+- Presentation Strategy: This is the first layer in the architecture, designed with a focus on simplicity, usability, and user experience. To achieve this, the team employs modern technologies, specifically:
+  - Front-end Library and Framework: The team uses React to develop the front-end. React allows the creation of flexible and efficient user interfaces.
+  - User-Friendly Features: The team prioritizes intuitive elements such as buttons, forms, and easy-to-navigate menus to ensure that even first-time users can easily interact with the system.
+  - Responsive Web Design: Ensures compatibility across different devices used by students and faculty members. The system is designed to adapt to various screen sizes, including desktops, mobile phones, and tablets.
+  - With React as the front-end framework, along with a user-centric design approach, the team aims to deliver an impressive user interface for HCMUT_SSPS while ensuring smooth integration with the system's layered architecture.
+- Data Storage Approach: In the system's layered architecture, the Data Layer utilizes MongoDB to store application data in collections instead of tables (as in relational databases). MongoDB provides flexibility for handling both structured and dynamic data.For the Smart Printing Service system, data is organized into collections corresponding to key entities, such as:
+  - Users: Stores customer information, including fields like user_id, full_name, password (hashed), role (Student or Staff), email, balance (remaining A4 pages), and last_usage.
+  - SPSO: Stores SPSO details, including sps_id, full_name, username, password (hashed), dob, email, phone, and last_usage.
+  - Printers: Stores printer information with fields like printer_id, printer_name, brand, model, description, location (campus, building, room), and status.
+  - Documents: Stores document details such as document_id, user_id, file_name, file_format, and page_count.
+  - PrintJobs: Stores print job data, including job_id, user_id, print_config (page orientation, paper size, duplex type, pages per side), start_time, end_time, status, and page_count_used.
+  - Transactions: Stores payment transactions for purchasing print pages, with fields like transaction_id, user_id, timestamp, pages_purchased, price, and status.
+  - Feedback: Stores user feedback, including feedback_id, user_id, title, content, and rating.
+  - Using MongoDB enhances system scalability and flexibility. MongoDB stores data in JSON-like documents (BSON), allowing the system to handle schema variations without rigid constraints. For example, printer information may have varying attributes depending on different cases, and MongoDB enables seamless management of such dynamic structures.
+- API Management: API (Application Programming Interface) is a collection of methods and protocols that allow the system to interact with external applications and services. APIs provide access points for calling system functions, enabling seamless data exchange and processing. For the HCMUT_SSPS automated printing system, the APIs include:
+  - Authentication and Security API: Ensures secure communications and printing operations via HCMUT_SSO authentication, while managing user access rights under SPSO supervision.
+  - Data Formatting and Input Processing API: Allows applications to send print files, images, or text data to the system. This API ensures data meets format and quality requirements before processing.
+  - Print Job Management API: Enables users to create, manage, and monitor print jobs, including scheduling, tracking status, checking available page balance, and canceling print jobs when needed.
+  - Payment API: Facilitates transactions for printing services and additional page purchases via the BKPay payment platform.
+  - Custom Print Template API: Allows users to create and manage custom print templates, supporting dynamic template generation for specific printing needs.
+  - Printer Control API: Provides direct control over printers, allowing the system to send commands and interact with devices.
+  - Reporting and Statistics API: Retrieves data on completed print jobs, execution time, page count, and other metrics. This API serves as a data source for tracking and generating detailed reports on printing activities.
+  - These APIs automate printing workflows while optimizing security, flexibility, and system-wide monitoring from user authentication to device control and print job reporting.
+  - To manage these APIs, the team will implement: API Gateway to orchestrate API requests efficiently. OpenAPI Specification (Swagger) for API documentation and testing, ensuring scalability and maintainability of the system.
 
 ## 📌**Implementation**
 
