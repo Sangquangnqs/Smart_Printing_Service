@@ -49,6 +49,7 @@ This tech stack ensures that HCMUT-SSPS operates efficiently, providing a seamle
 <p align="center">
 <img src="assets/cn2.png" alt="cn2" width="500">
 </p>
+
 ## 🚀**Source code:**
 
 The source code of the software can be accessed via the following link:
