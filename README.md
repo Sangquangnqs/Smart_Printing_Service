@@ -240,6 +240,123 @@ For the system architecture, the team utilizes the **MERN stack (MongoDB, Expres
   - These APIs automate printing workflows while optimizing security, flexibility, and system-wide monitoring from user authentication to device control and print job reporting.
   - To manage these APIs, the team will implement: API Gateway to orchestrate API requests efficiently. OpenAPI Specification (Swagger) for API documentation and testing, ensuring scalability and maintainability of the system.
 
+
+### 🚀 **Component Diagram**
+
+**1. Component Diagram for Student Document Printing Function**
+
+<p align="center">
+<img src="assets/cd.png" alt="cd" width="600">
+</p>
+
+Description of the Document Printing Component Diagram:
+- PrintWebpage
+  - Functionality:
+    - Provides an interface for students to initiate print requests.
+    - Receives input from students, including documents, printer selection, and print settings.
+  - Interactions with other components:
+    - Printer: Sends requests to select an available printer.
+    - PrintInfor: Sends requests to configure printing attributes.
+    - Document: Sends requests to load the document for printing.
+- Printer
+  - Functionality:
+    - Manages and lists available printers in the system.
+    - Checks printer statuses and selects an available printer.
+  - Interactions with other components:
+    - PrintWebpage: Receives requests to select a printer from the user interface and responds with the printer status.
+- PrintInfor
+  - Functionality:
+    - Manages printing settings such as paper size, print mode (single/double-sided), etc.
+    - Stores printing preferences chosen by students.
+  - Interactions with other components:
+    - PrintWebpage: Receives requests to set printing attributes.
+    - Accounting: Triggers a process to check the student's account balance before executing the print request.
+- Document
+  - Functionality:
+    - Handles and stores uploaded documents from students.
+    - Verifies document attributes to ensure compatibility with system configurations.
+  - Interactions with other components:
+    - PrintWebpage: Receives requests to upload documents from students.
+    - SystemConfig: Performs configuration checks on documents to ensure system compatibility.
+- Accounting
+  - Functionality:
+    - Manages student account balances.
+    - Checks the student’s balance before allowing printing.
+  - Interactions with other components:
+    - PrintInfor: Receives requests to verify account balances for printing.
+- SystemConfig
+  - Functionality:
+    - Manages and stores system printing configurations, including file formats, sizes, etc.
+    - Ensures that documents comply with configurations before printing.
+  - Interactions with other components:
+    - Document: Receives configuration check requests before executing the print job.
+
+**2. Component Diagram for the Entire System**
+
+<p align="center">
+<img src="assets/cd2.png" alt="cd2" width="600">
+</p>
+
+Description of the Entire System Component Diagram:
+- Subsystem Student: Functions for students, including:\
+  - Login: Allows students to log in via SSO.
+  - Print: Enables students to request document printing.
+  - Purchase: Allows students to buy additional print pages via payment services.
+  - View my history: Enables students to view their printing history.
+- Subsystem SPSO: Management functions for SPSO, including:
+  - Login: SPSO login component.
+  - View printers: Displays a list of available printers.
+  - Manage configuration: Sets system configurations (e.g., default number of pages per student).
+  - Add/Enable/Disable printers: Manages printer status.
+  - View all history: Views the printing history of all students.
+  - View report: Reviews monthly or yearly printing reports.
+- Subsystem SSO_HCMUT:
+  - User authentication component of the HCMUT system, supporting student and SPSO logins.
+- Subsystem Webpage:
+  - Includes APIs and functionalities for core business processes, such as:
+    - Documenting: Manages printing documents.
+    - Printer API: Communicates with printers for print requests.
+    - System config: Configures general system settings.
+    - Accounting: Manages student print balances.
+    - View printers: Displays and manages printer information.
+    - View history: Views printing history.
+- Subsystem Database:
+  - Stores system information and data, including:
+    - Students info: Stores student data.
+    - SPSO info: Stores SPSO data.
+    - System config: Stores system configurations.
+    - Printers info: Stores printer information.
+    - Prints info: Stores student print requests.
+    - History: Stores print history.
+    - Report: Stores monthly and yearly reports.
+- Subsystem Printer:
+  - Handles printing requests, including:
+    - Queue: Manages the queue of print jobs.
+    - Start Printing: Executes document printing when requested by students.
+
+**Interactions Between Components:**
+- Student/SPSO and SSO_HCMUT:
+  - When a student or SPSO wants to access the system, they must authenticate through SSO_HCMUT.
+  - The Authentication component in SSO_HCMUT processes the login request, verifies user credentials, and sends a success or failure response.
+- SSO_HCMUT and Database:
+  - The Authentication component retrieves data from Students info and SPSO info in the Database to verify user credentials.
+- Student and Webpage:
+  - Print from the Student Subsystem sends a print request to Documenting.
+  - Documenting processes document information, while Printer API handles print settings and execution.
+  - View my history from the Student Subsystem sends a request to View history in Webpage to retrieve printing history, including document name, page count, and timestamp.
+- SPSO and Webpage:
+  - View printers from SPSO interacts with Printer API in Webpage to fetch a list of printers and their statuses.
+  - Manage configuration from SPSO communicates with System config in Webpage to adjust system settings, such as default page quotas and permitted file types.
+  - View all history from SPSO sends a request to View history in Webpage to retrieve the full printing history.
+- SPSO and Database:
+  - View report accesses Reporting in the Database to retrieve summary data for printing reports.
+- Webpage and Database:
+  - Webpage components access the Database to store or retrieve information when requested by students or SPSO.
+- Webpage and Printer:
+  - When a student requests to print a document, Printer API in Webpage sends a request to available printers via the Printer subsystem.
+  - Printer API places the document in the print queue (Queue component).
+  - After completing the print job, the Printer component sends a status update (completed or failed) back to Webpage, which then updates the Database accordingly
+
 ## 📌**Implementation**
 
 ## 📌**Feature Overview**
