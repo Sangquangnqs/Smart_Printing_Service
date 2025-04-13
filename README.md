@@ -482,6 +482,100 @@ The usability testing of the SSPS project interface helped the team identify its
 
 ## 📌**Feature Overview**
 
+**1. Login**
+- First, access the homepage of the website, then select "Login":
+
+<p align="center">
+<img src="assets/gd.png" alt="gd" width="500">
+</p>
+
+- The role selection interface will be displayed. Choose one of the two roles to proceed with login:
+
+<p align="center">
+<img src="assets/gd2.png" alt="gd2" width="500">
+</p>
+
+- Enter the student ID (MSSV) and password to log in.
+
+<p align="center">
+<img src="assets/gd3.png" alt="gd3" width="500">
+</p>
+
+**2. Actions for SPSO**
+- After successfully logging in as an SPSO, the system will redirect to the homepage. Select "Manage" to access the management interface for SPSO.
+
+<p align="center">
+<img src="assets/gd4.png" alt="gd4" width="500">
+</p>
+
+- The first section is the printer management interface. Here, you can turn printers on/off, add new printers, edit existing printer information, and remove printers from the system.
+
+<p align="center">
+<img src="assets/gd5.png" alt="gd5" width="500">
+</p>
+
+- Next is the system configuration interface, where you can adjust system parameters.
+
+<p align="center">
+<img src="assets/gd6.png" alt="gd6" width="500">
+</p>
+
+- Following that is the print history interface. You can view the printing history of all students.
+
+<p align="center">
+<img src="assets/gd7.png" alt="gd7" width="500">
+</p>
+
+- Finally, the transaction history interface allows you to view all students' paper purchase history.
+
+<p align="center">
+<img src="assets/gd8.png" alt="gd8" width="500">
+</p>
+
+**3. Actions for Students**
+- Similar to SPSO, after successfully logging in as a student, the system will also redirect to the homepage. Select "Print Now" to access the student interface.
+
+<p align="center">
+<img src="assets/gd9.png" alt="gd9" width="500">
+</p>
+
+- The first section is the document printing page. Here, you can select documents, choose a printer, specify the number of pages, paper size, single/double-sided printing, and the number of copies to print.
+
+<p align="center">
+<img src="assets/gd10.png" alt="gd10" width="500">
+</p>
+
+- Next is the page purchase section. Enter the number of pages needed and proceed with the purchase.
+
+<p align="center">
+<img src="assets/gd11.png" alt="gd11" width="500">
+</p>
+
+- The system will display a QR code for payment.
+
+<p align="center">
+<img src="assets/gd12.png" alt="gd12" width="500">
+</p>
+
+- Once the system confirms a successful payment, the website will redirect to the payment result page.
+
+<p align="center">
+<img src="assets/gd13.png" alt="gd13" width="500">
+</p>
+
+- Following that is the print history page, where you can view your own print history and filter by date.
+
+<p align="center">
+<img src="assets/gd14.png" alt="gd14" width="500">
+</p>
+
+- Finally, the transaction history page allows you to view your own purchase history.
+
+<p align="center">
+<img src="assets/gd16.png" alt="gd16" width="500">
+</p>
+
+
 ## 📌**Conclusion**
 
 ## 🏆Contributors
