@@ -182,6 +182,20 @@ The class diagram describes the print service management system, including key c
 
 ## 📌**Develop MVP 1** 
 
+Our team has designed the user interface using Figma. To view the detailed MVP 1 design, please access the Figma design [here](https://www.figma.com/design/5M6OHNT6IMSLUMfqzglkhf/CNPM?node-id=0-1&p=f).
+
+<p align="center">
+<img src="assets/mvp.png" alt="mvp" width="600">
+</p>
+
+<p align="center">
+<img src="assets/mvp1.png" alt="mvp1" width="600">
+</p>
+
+<p align="center">
+<img src="assets/mvp2.png" alt="mvp2" width="600">
+</p>
+
 ## 📌**Architecture design**
 
 ## 📌**Implementation**
