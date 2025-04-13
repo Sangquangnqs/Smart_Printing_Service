@@ -42,6 +42,13 @@ The HCMUT-SSPS system is built using a modern technology stack to ensure efficie
   - `GitHub` – A version control system to manage and track code changes.
 This tech stack ensures that HCMUT-SSPS operates efficiently, providing a seamless experience for students while maintaining high performance and security
 
+<p align="center">
+<img src="assets/cn.png" alt="cn1" width="500">
+</p>
+
+<p align="center">
+<img src="assets/cn2.png" alt="cn2" width="500">
+</p>
 ## 🚀**Source code:**
 
 The source code of the software can be accessed via the following link:
